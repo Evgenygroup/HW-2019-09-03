@@ -33,6 +33,8 @@ public class Main {
         System.out.println(output3);
 
 
+
+
         String input4 = "Big brown fox";
         TransformerRule rule4 = new ToStarsRule();
         String output4 = transform(input4, rule4);
@@ -41,18 +43,19 @@ public class Main {
         System.out.println(expected4.equals(output4));
         System.out.println(input4);
         System.out.println(output4);
-
-
     }
-    public static String transform(String sentence, TransformerRule rule){
-        String[] word = sentence.split(" ");
-        for (int i = 0; i < word.length; i++) {
-            if( rule.check(word[i])) {
-                word[i] = rule.transform(word[i]);
+
+
+        public static String transform (String sentence, TransformerRule rule){
+            String[] word = sentence.split(" ");
+            for (int i = 0; i < word.length; i++) {
+                if (rule.check(word[i])) {
+                    word[i] = rule.transform(word[i]);
+                }
             }
+            return String.join(" ", word);
         }
-        return String.join(" ", word);
-    }
 
     }
+
 

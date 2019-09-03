@@ -3,5 +3,6 @@ package de.telran;
 public interface TransformerRule {
 
     String transform(String string);
-    boolean check(String input) ;
+
+    boolean check(String s);
 }

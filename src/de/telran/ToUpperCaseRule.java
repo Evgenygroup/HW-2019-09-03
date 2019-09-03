@@ -1,6 +1,6 @@
 package de.telran;
 
-public class ToUpperCaseRule implements TransformerRule {
+public class ToUpperCaseRule implements TransformerRule, CheckWord {
 
     public boolean check(String input) {
         return input.length() == 3;

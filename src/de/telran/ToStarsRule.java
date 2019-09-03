@@ -1,6 +1,6 @@
 package de.telran;
 
-public class ToStarsRule implements TransformerRule {
+public class ToStarsRule implements TransformerRule, CheckWord {
 
     public boolean check(String input) {
         return input.length() == 3;
